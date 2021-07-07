@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<!-- ==============================
+    Project:        Metronic "Aircv" Frontend Freebie - Responsive HTML Template Based On Twitter Bootstrap 3.3.4
+    Version:        1.1
+    Author:         KeenThemes - Alex Naranjo
+    Description:    Alex Naranjo - Portfolio. Project modified by Alex Naranjo 06-22-2021  
+       ('-.                 ('-.  ) (`-.                                   _ .-') _     ('-.   
+  ( OO ).-.           _(  OO)  ( OO ).                                ( (  OO) )  _(  OO)  
+  / . --. / ,--.     (,------.(_/.  \_)-.         .-----.  .-'),-----. \     .'_ (,------. 
+  | \-.  \  |  |.-')  |  .---' \  `.'  /         '  .--./ ( OO'  .-.  ',`'--..._) |  .---' 
+.-'-'  |  | |  | OO ) |  |      \     /\         |  |('-. /   |  | |  ||  |  \  ' |  |     
+ \| |_.'  | |  |`-' |(|  '--.    \   \ |        /_) |OO  )\_) |  |\|  ||  |   ' |(|  '--.  
+  |  .-.  |(|  '---.' |  .--'   .'    \_)       ||  |`-'|   \ |  | |  ||  |   / : |  .--'  
+  |  | |  | |      |  |  `---. /  .'.  \       (_'  '--'\    `'  '-'  '|  '--'  / |  `---. 
+  `--' `--' `------'  `------''--'   '--'         `-----'      `-----' `-------'  `------' 
+
+================================== -->
+<html lang="en" class="no-js">
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>Alex Naranjo Portfolio</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="Web Delevoper Maryland DC Virginia" name="description"/>
+        <meta content="Alex Naranjo" name="author"/>
+
+        <!-- GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+        <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- PAGE LEVEL PLUGIN STYLES -->
+        <link href="css/animate.css" rel="stylesheet">
+
+        <!-- THEME STYLES -->
+        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico"/>
+    </head>
+    <!-- END HEAD -->
+
+    <!-- BODY -->
+    <body id="body" data-spy="scroll" data-target=".header">
+
+        <!--========== HEADER ==========-->
+        <header class="header navbar-fixed-top">
+            <!-- Navbar -->
+            <nav class="navbar" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="menu-container js_nav-item">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="toggle-icon"></span>
+                        </button>
+
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a class="logo-wrap" href="#body">
+                                <img class="logo-img logo-img-main" src="img/logo.png" alt="Asentus Logo">
+                                <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="Asentus Logo">
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-collapse">
+                        <div class="menu-container">
+                            <ul class="nav navbar-nav navbar-nav-right">
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Home</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#about">About</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#experience">Experience</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">Work</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Navbar Collapse -->
+                </div>
+            </nav>
+            <!-- Navbar -->
+        </header>
+        <!--========== END HEADER ==========-->
+
+        <!--========== SLIDER ==========-->
+        <div class="promo-block parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/01.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="promo-block-divider">
+                            <h1 class="promo-block-title">Alex <br/> Naranjo</h1>
+                            <p class="promo-block-text">Full-Stack Web Developer</p>
+                        </div>
+                        <ul class="list-inline">
+                            <li><a href="https://www.linkedin.com/in/alex-naranjom/" class="social-icons"><i class="icon-social-linkedin"></i></a></li>
+                            <li><a href="https://github.com/alexnaranjom" class="social-icons"><i class="icon-social-github"></i></a></li>
+                            <li><a href="https://replit.com/@alexnar7" class="social-icons"><i><img id="preview-image" src="img/icon/replit-icon.svg" crossorigin="anonymous" style="border-width: 1px;" width="20" height="20"></i></a></li> 
+                            
+                        </ul>
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+        <!--========== SLIDER ==========-->
+
+        <!--========== PAGE LAYOUT ==========-->
+        <!-- About -->
+        <div id="about">
+            <div class="container content-lg">
+                <div class="row">
+                    <div class="col-sm-3 sm-margin-b-30">
+                        <div class="text-right sm-text-left">
+                            <h2 class="margin-b-0">Intro</h2>
+                            <p>Who  am?</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-sm-offset-1">
+                        <div class="margin-b-60">
+                            <p>Hey, my name is Alex Naranjo I live in the DMV Are. I am highly motivated Web Developer with 5+ years of experience in implementation of websites and web applications. Demonstrated proficiency in PHP, HTML5, CSS3, JavaScript, Github and MySQL to develop complex websites, RESTful API web services, experience managing and maintaining existing websites, and providing effective user experiences for stakeholders, clients, and the general public.</p>
+                            <p>My main skills are:</p>
+                        </div>
+
+                        <!-- Progress Box -->
+                        <div class="progress-box">
+                            <h5>PHP <span class="color-heading pull-right">High</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>HTML5 <span class="color-heading pull-right">High</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="100"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>JavaSript <span class="color-heading pull-right">High</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>Bootstrap <span class="color-heading pull-right">High</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="77"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>CSS3 <span class="color-heading pull-right">High</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>Python <span class="color-heading pull-right">Medium</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="50"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>AWS <span class="color-heading pull-right">Medium</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="55"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>Wordpress <span class="color-heading pull-right">High</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>ServiceNow <span class="color-heading pull-right">Medium</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="45"></div>
+                            </div>
+                        </div>
+                       
+
+                        <!-- End Progress Box -->
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+        <!-- End About -->
+
+        <!-- Experience -->
+        <div id="experience">
+            <div class="bg-color-sky-light" data-auto-height="true">
+                <div class="container content-lg">
+                    <div class="row">
+                        <div class="col-sm-3 sm-margin-b-30">
+                            <div class="text-right sm-text-left">
+                                <h2 class="margin-b-0">Education:</h2>
+                                <p>Little more about me</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 col-sm-offset-1">
+                            <div class="row row-space-2 margin-b-4">
+                                <div class="col-md-4 md-margin-b-4">
+                                    <div class="service" data-height="height">
+                                        <div class="service-element">
+                                            <i class="service-icon icon-cloud-upload"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3>AWS Certified Cloud Practitioner</h3>
+                                            <img src="img/icon/AWS-CloudPractitioner-2020.png" class="height-100" alt="AWS CPP"/>
+                                            <p class="margin-b-5">Issued by Amazon Web Services Training and Certification</p>
+                                           
+                                        </div>
+                                        <a href="#" class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+                                <div class="col-md-4 md-margin-b-4">
+                                    <div class="service bg-color-base wow zoomIn" data-height="height" data-wow-duration=".3" data-wow-delay=".1s">
+                                        <div class="service-element">
+                                            <i class="service-icon color-white icon-cloud-download"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3 class="color-white">ServiceNow CSA</h3>
+                                            <BR>
+                                            <img src="img/icon/servicenow.png" class="height-100" alt=""/>                
+                                            <p class="color-white margin-b-5">Certified System Administrator</p>
+                                        </div>
+                                        <a href="#" class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="service" data-height="height">
+                                        <div class="service-element">
+                                            <i class="service-icon icon-badge"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3>Full-Stack Web Developer</h3>
+                                            <img src="img/icon/web.png" class="height-100" alt=""/>                
+                                            <p class="margin-b-5">Skilled in designing and building web-based productivity applications</p>
+                                        </div>
+                                        <a href="#" class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+                            </div>
+                            <!--// end row -->
+                        </div>
+                    </div>
+                    <!--// end row -->
+                </div>
+            </div>
+        </div>
+        <!-- End Experience -->
+
+        <!-- Work -->
+        <div id="work">
+            <div class="container content-lg">
+                <div class="row">
+                    <div class="col-sm-3 sm-margin-b-30">
+                        <div class="text-right sm-text-left">
+                            <h2 class="margin-b-0">Works</h2>
+                            <p>Part of the projets that I participated.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-sm-offset-1">
+                        <!-- Masonry Grid -->
+                        <div class="masonry-grid row row-space-2">
+                            <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
+                            <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-8 margin-b-4">
+                                <!-- Work -->
+                                <div class="work work-popup-trigger">
+                                    <div class="work-overlay">
+                                        <img class="full-width img-responsive" src="img/800x400/01.jpg" alt="Portfolio Image">
+                                    </div>
+                                    <div class="work-popup-overlay">
+                                        <div class="work-popup-content">
+                                            <a href="javascript:void(0);" class="work-popup-close">Hide</a>
+                                            <div class="margin-b-30">
+                                                <h3 class="margin-b-5">Ted Turner Company</h3>    
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                                                    <div class="margin-t-10 sm-margin-t-0">
+                                                        <p>Website Ted Turner Company Ltda. </p>
+                                                        <p>Located in Beltsville, MD. Ted Turner Company, Inc, specialized in Handrails Fabrication, Cladding, Laser Cutting and more </p>
+                                                        <ul class="list-inline work-popup-tag">
+                                                            <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://www.tedturnercompany.com">Go to tedturnercompany.com</a></li>
+                                                             </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="margin-t-10 sm-margin-t-0">
+                                                        <p class="margin-b-5"><strong>Tools:</strong> </p>
+                                                        <p class="margin-b-5">PHP</p>
+                                                        <p class="margin-b-5">HTML</p>
+                                                        <p class="margin-b-5">Mysql</p>
+                                                        <p class="margin-b-5">CSS</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Work -->
+                            </div>
+                            <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 margin-b-4">
+                                <!-- Work -->
+                                <div class="work work-popup-trigger">
+                                    <div class="work-overlay">
+                                        <img class="full-width img-responsive" src="img/397x400/01.jpg" alt="Portfolio Image">
+                                    </div>
+                                    <div class="work-popup-overlay">
+                                        <div class="work-popup-content">
+                                            <a href="javascript:void(0);" class="work-popup-close">Hide</a>
+                                            <div class="margin-b-30">
+                                                <h3 class="margin-b-5">SecurTech</h3>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                                                    <div class="margin-t-10 sm-margin-t-0">
+                                                        <p>Website SecurTech </p>
+                                                        <p>Equipmnet, software and securuty solutions</p>
+                                                        <ul class="list-inline work-popup-tag">
+                                                            <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://securtech.com.ec/">Go to securtech.com.ec</a></li>
+                                                             </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="margin-t-10 sm-margin-t-0">
+                                                        <p class="margin-b-5"><strong>Tools:</strong> </p>
+                                                        <p class="margin-b-5">Wordpress</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Work -->
+                            </div>
+                            <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 md-margin-b-4">
+                                <!-- Work -->
+                                <div class="work work-popup-trigger">
+                                    <div class="work-overlay">
+                                        <img class="full-width img-responsive" src="img/397x300/01.jpg" alt="Portfolio Image">
+                                    </div>
+                                    <div class="work-popup-overlay">
+                                        <div class="work-popup-content">
+                                            <a href="javascript:void(0);" class="work-popup-close">Hide</a>
+                                            <div class="margin-b-30">
+                                                <h3 class="margin-b-5">Ecuador – ZIP code</h3>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                                                    <div class="margin-t-10 sm-margin-t-0">
+                                                        <p>Website to search Zip code in Ecuador project developed with Arcgis, postgre, CSS and JavaScript</p>
+                                                        <ul class="list-inline work-popup-tag">
+                                                            <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://codigopostal.gob.ec/">Go to codigopostal.gob.ec</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="margin-t-10 sm-margin-t-0">
+                                                        <p class="margin-b-5"><strong>Tools:</strong></p>
+                                                        <p class="margin-b-5">JavaScript</p>
+                                                        <p class="margin-b-5">ArcGIS</p>
+                                                        <p class="margin-b-5">PostgreSQL</p>
+                                                        <p class="margin-b-5">CSS</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Work -->
+                            </div>
+                            <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 md-margin-b-4">
+                                <!-- Work -->
+                                <div class="work work-popup-trigger">
+                                    <div class="work-overlay">
+                                        <img class="full-width img-responsive" src="img/397x300/02.jpg" alt="Portfolio Image">
+                                    </div>
+                                    <div class="work-popup-overlay">
+                                        <div class="work-popup-content">
+                                            <a href="javascript:void(0);" class="work-popup-close">Hide</a>
+                                            <div class="margin-b-30">
+                                                <h3 class="margin-b-5">Ministery of Sports - Ecuador</h3>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                                                    <div class="margin-t-10 sm-margin-t-0">
+                                                        <p>Several web applications  to promote community participation in recreational activities</p>
+                                                        <ul class="list-inline work-popup-tag">
+                                                            <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://www.deporte.gob.ec/">Go to Main website  </a></li>
+                                                            <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://aplicativos.deporte.gob.ec/aplicativos/">  Go to Web apps</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="margin-t-10 sm-margin-t-0">
+                                                        <p class="margin-b-5"><strong>Tools:</strong></p>
+                                                        <p class="margin-b-5">JavaScript</p>
+                                                        <p class="margin-b-5">Bootstrap</p>
+                                                        <p class="margin-b-5">MySQL</p>
+                                                        <p class="margin-b-5">CSS</p>
+                                                        <p class="margin-b-5">PHP</p>
+                                                        <p class="margin-b-5">jQuery</p>     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Work -->
+                            </div>
+                            <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
+                                <!-- Work -->
+                                <div class="work work-popup-trigger">
+                                    <div class="work-overlay">
+                                        <img class="full-width img-responsive" src="img/397x300/03.jpg" alt="Portfolio Image">
+                                    </div>
+                                    <div class="work-popup-overlay">
+                                        <div class="work-popup-content">
+                                            <a href="javascript:void(0);" class="work-popup-close">Hide</a>
+                                            <div class="margin-b-30">
+                                                <h3 class="margin-b-5">Responsive Gallery eith tools to filter pictures by tags</h3>
+                                                <span></span>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                                                    <div class="margin-t-10 sm-margin-t-0">
+                                                        <p>Mix it up gallery to find pictures</p>
+                                                        <ul class="list-inline work-popup-tag">
+                                                            <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://www.tedturnercompany.com/gallery.html">Go to Gallery</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="margin-t-10 sm-margin-t-0">
+                                                        <p class="margin-b-5"><strong>Tools:</strong></p>
+                                                        <p class="margin-b-5">JQuery</p>
+                                                        <p class="margin-b-5">CSS</p>
+                                                        <p class="margin-b-5">JavaScript</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Work -->
+                            </div>
+                        </div>
+                        <!-- End Masonry Grid -->
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+        <!-- End Work -->
+            
+        <!-- Contact -->
+        <div id="contact">
+            <div class="bg-color-sky-light">
+                <div class="container content-lg">
+                    <div class="row">
+                        <div class="col-sm-3 sm-margin-b-30">
+                            <div class="text-right sm-text-left">
+                                <h2 class="margin-b-0">Contacts</h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 col-sm-offset-1">
+                            <div class="row">
+                                <div class="col-md-3 col-xs-6 md-margin-b-30">
+                                    <h5>Location</h5>
+                                    <a href="#">Takoma Park, MD</a>
+                                </div>
+                                <div class="col-md-3 col-xs-6">
+                                    <h5>Email</h5>
+                                    <a href="mailto:#">alex.naranjo.m@gmail.com</a>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <!--// end row -->
+                </div>
+            </div>
+        </div>
+        <!-- End Contact -->
+        <!--========== END PAGE LAYOUT ==========-->
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer">
+            <div class="content container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img class="footer-logo" src="img/logo-dark.png" alt="Aircv Logo">
+                    </div>
+                    <div class="col-xs-6 text-right sm-text-left">
+                        <p class="margin-b-0">Theme Powered by: KeenThemes.com & modified by Alex Naranjo</p>
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+        </footer>
+        <!--========== END FOOTER ==========-->
+
+        <!-- Back To Top -->
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+
+        <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- CORE PLUGINS -->
+        <script src="vendor/jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL PLUGINS -->
+        <script src="vendor/jquery.easing.js" type="text/javascript"></script>
+        <script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
+        <script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+        <script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery.parallax.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery.appear.js" type="text/javascript"></script>
+        <script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+        <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL SCRIPTS -->
+        <script src="js/layout.min.js" type="text/javascript"></script>
+        <script src="js/components/progress-bar.min.js" type="text/javascript"></script>
+        <script src="js/components/masonry.min.js" type="text/javascript"></script>
+        <script src="js/components/wow.min.js" type="text/javascript"></script>
+
+    </body>
+    <!-- END BODY -->
+</html>
