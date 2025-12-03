@@ -36,6 +36,74 @@
         <!-- THEME STYLES -->
         <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
 
+        <!-- Hero readability tweaks -->
+        <style>
+            .promo-block {
+                position: relative;
+            }
+
+            .promo-block::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.45); /* darken busy backgrounds for contrast */
+                z-index: 0;
+            }
+
+            .hero-content {
+                position: relative;
+                z-index: 1;
+                max-width: 720px;
+                padding: 24px 28px;
+                background: rgba(0, 0, 0, 0.68); /* semi-transparent card behind text */
+                border-radius: 10px;
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+            }
+
+            .hero-content h1,
+            .hero-content h2,
+            .hero-content p {
+                color: #fff;
+                text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* edge definition over images */
+            }
+
+            .hero-content h1 {
+                font-size: 3.25rem;
+                line-height: 1.05;
+            }
+
+            .hero-content h2 {
+                font-size: 1.5rem;
+                margin-bottom: 0.75rem;
+                line-height: 1.3;
+            }
+
+            .hero-content p {
+                font-size: 1.05rem;
+                line-height: 1.65;
+                margin: 0;
+            }
+
+            @media (max-width: 768px) {
+                .hero-content {
+                    max-width: 100%;
+                    padding: 18px 20px;
+                }
+
+                .hero-content h1 {
+                    font-size: 2.4rem;
+                }
+
+                .hero-content h2 {
+                    font-size: 1.2rem;
+                }
+
+                .hero-content p {
+                    font-size: 0.98rem;
+                }
+            }
+        </style>
+
         <!-- Favicon -->
         <link rel="shortcut icon" href="favicon.ico"/>
     </head>
@@ -90,9 +158,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        <div class="promo-block-divider">
+                        <div class="hero-content">
                             <h1 class="promo-block-title">Alex <br/> Naranjo</h1>
-                            <p class="promo-block-text">Web Developer</p>
+                            <h2>Web Developer – PHP, Laravel &amp; Modern Web</h2>
+                            <p class="tagline">Web developer with 5+ years delivering production web applications for government and private clients.
+                                Specializing in PHP/Laravel, accessibility (Section 508), and clean, maintainable code, while actively expanding into Python and AI-assisted development to take on broader architectural responsibilities.
+</p>
                         </div>
                         <ul class="list-inline">
                             <li><a href="https://www.linkedin.com/in/alex-naranjom/" class="social-icons"><i class="icon-social-linkedin"></i></a></li>
@@ -120,65 +191,19 @@
                     </div>
                     <div class="col-sm-8 col-sm-offset-1">
                         <div class="margin-b-60">
-                            <p>Hello, my name is Alex Naranjo. I live in the DMV area. I am a highly motivated Web Developer with over 5 years of experience in implementing websites and web applications. I have demonstrated proficiency in PHP, HTML5, CSS3, JavaScript, GitHub, and MySQL. I specialize in developing complex websites and RESTful API web services. Additionally, I have experience in managing and maintaining existing websites, and providing effective user experiences for stakeholders, clients, and the general public.</p>
-                            <p>My main skills are:</p>
+                            <p>Hello, my name is Alex Naranjo. I’m a web developer based in the Washington, DC metro area with over 5 years of experience building and maintaining production websites and web applications. I specialize in PHP, Laravel, JavaScript, HTML5/CSS3, and SQL databases such as MySQL and PostgreSQL./p>
+                            <p>In my current role at ICF, I support a Social Security Administration project focused on accessibility (Section 508) and clear user experiences. I also use tools like GitHub Copilot and ChatGPT to design, debug, and refactor code, and I’m gradually expanding my skills in Python and AI-driven architectures so I can take on more integration and architectural responsibilities in the future.</p>
                         </div>
 
                         <!-- Progress Box -->
-                        <div class="progress-box">
-                            <h5>PHP <span class="color-heading pull-right">High</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="85"></div>
-                            </div>
-                        </div>
-                        <div class="progress-box">
-                            <h5>HTML5 <span class="color-heading pull-right">High</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="100"></div>
-                            </div>
-                        </div>
-                        <div class="progress-box">
-                            <h5>JavaSript <span class="color-heading pull-right">High</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="70"></div>
-                            </div>
-                        </div>
-                        <div class="progress-box">
-                            <h5>Bootstrap <span class="color-heading pull-right">High</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="77"></div>
-                            </div>
-                        </div>
-                        <div class="progress-box">
-                            <h5>CSS3 <span class="color-heading pull-right">High</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="80"></div>
-                            </div>
-                        </div>
-                        <div class="progress-box">
-                            <h5>Python <span class="color-heading pull-right">Medium</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="50"></div>
-                            </div>
-                        </div>
-                        <div class="progress-box">
-                            <h5>AWS <span class="color-heading pull-right">Medium</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="55"></div>
-                            </div>
-                        </div>
-                        <div class="progress-box">
-                            <h5>Wordpress <span class="color-heading pull-right">High</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="70"></div>
-                            </div>
-                        </div>
-                        <div class="progress-box">
-                            <h5>ServiceNow <span class="color-heading pull-right">Medium</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="45"></div>
-                            </div>
-                        </div>
+                        <h5>My main skills are:</h5>
+                        <ul class="skills-list">
+                                <li><strong>Backend & Web:</strong> PHP, Laravel, JavaScript, HTML5, CSS3, REST APIs</li>
+                                <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
+                                <li><strong>Cloud & Platforms:</strong> AWS (Cloud Practitioner), ServiceNow (CSA), WordPress</li>
+                                <li><strong>Tools & Workflow:</strong> Git, GitHub, Visual Studio Code, GitHub Copilot, ChatGPT</li>
+                                <li><strong>Currently learning:</strong> Python and AI-focused architectures</li>
+                         </ul>
                        
 
                         <!-- End Progress Box -->
