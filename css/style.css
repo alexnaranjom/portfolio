@@ -682,7 +682,43 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 700; }
 .form-input::placeholder { color: rgba(148,163,184,0.45); }
 .form-input:focus { outline: none; border-color: var(--color-accent); }
 .form-textarea { resize: vertical; min-height: 130px; }
-.h-captcha { margin-top: 0.25rem; }
+
+.captcha-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.captcha-display {
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  color: var(--color-accent);
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  user-select: none;
+  min-width: 160px;
+  text-align: center;
+}
+.captcha-refresh {
+  color: var(--color-muted);
+  font-size: 1.3rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius);
+  transition: color var(--transition), transform var(--transition);
+  line-height: 1;
+}
+.captcha-refresh:hover { color: var(--color-accent); transform: rotate(180deg); }
+.captcha-error {
+  display: block;
+  font-size: 0.8rem;
+  color: #f87171;
+  min-height: 1.2em;
+  margin-top: 0.3rem;
+}
 
 /* ================================
    FOOTER

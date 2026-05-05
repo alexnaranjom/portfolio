@@ -23,9 +23,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- hCaptcha -->
-  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -601,8 +598,15 @@
               <label class="form-label" for="contact-message">Message</label>
               <textarea class="form-input form-textarea" id="contact-message" name="message" required placeholder="What's on your mind?" rows="5"></textarea>
             </div>
-            <!-- hCaptcha: replace YOUR_HCAPTCHA_SITEKEY with key from hcaptcha.com/signup-interstitial -->
-            <div class="h-captcha" data-sitekey="YOUR_HCAPTCHA_SITEKEY" data-theme="dark"></div>
+            <div class="form-row">
+              <label class="form-label" for="captcha-input">Verify you're human</label>
+              <div class="captcha-wrap">
+                <div class="captcha-display" id="captcha-display" aria-hidden="true"></div>
+                <button type="button" class="captcha-refresh" id="captcha-refresh" aria-label="Refresh code" title="Get a new code">↻</button>
+              </div>
+              <input class="form-input" type="text" id="captcha-input" autocomplete="off" required placeholder="Enter the code above" maxlength="6" spellcheck="false">
+              <span class="captcha-error" id="captcha-error" role="alert" aria-live="polite"></span>
+            </div>
             <button class="btn btn-primary btn-full" type="submit">Send Message →</button>
           </form>
 

@@ -64,3 +64,40 @@ document.querySelectorAll('.animate-on-scroll').forEach(el => animObserver.obser
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+/* ================================
+   CONTACT CAPTCHA
+   ================================ */
+const CHARS = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // no 0/O/1/I to avoid confusion
+let captchaCode = '';
+
+function generateCaptcha() {
+  captchaCode = Array.from({ length: 6 }, () =>
+    CHARS[Math.floor(Math.random() * CHARS.length)]
+  ).join('');
+  document.getElementById('captcha-display').textContent = captchaCode;
+}
+
+const captchaDisplay = document.getElementById('captcha-display');
+if (captchaDisplay) {
+  generateCaptcha();
+
+  document.getElementById('captcha-refresh').addEventListener('click', () => {
+    generateCaptcha();
+    document.getElementById('captcha-input').value = '';
+    document.getElementById('captcha-error').textContent = '';
+  });
+
+  document.querySelector('.contact-form').addEventListener('submit', e => {
+    const input = document.getElementById('captcha-input').value.trim().toUpperCase();
+    const error = document.getElementById('captcha-error');
+    if (input !== captchaCode) {
+      e.preventDefault();
+      error.textContent = 'Incorrect code — please try again.';
+      generateCaptcha();
+      document.getElementById('captcha-input').value = '';
+    } else {
+      error.textContent = '';
+    }
+  });
+}
