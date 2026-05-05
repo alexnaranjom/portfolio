@@ -1,605 +1,647 @@
 <!DOCTYPE html>
-<!-- ==============================
-    Project:        Metronic "Aircv" Frontend Freebie - Responsive HTML Template Based On Twitter Bootstrap 3.3.4
-    Version:        1.1
-    Author:         KeenThemes - Alex Naranjo
-    Description:    Alex Naranjo - Portfolio. Project modified by Alex Naranjo 06-22-2021  
-       ('-.                 ('-.  ) (`-.                                   _ .-') _     ('-.   
-  ( OO ).-.           _(  OO)  ( OO ).                                ( (  OO) )  _(  OO)  
-  / . --. / ,--.     (,------.(_/.  \_)-.         .-----.  .-'),-----. \     .'_ (,------. 
-  | \-.  \  |  |.-')  |  .---' \  `.'  /         '  .--./ ( OO'  .-.  ',`'--..._) |  .---' 
-.-'-'  |  | |  | OO ) |  |      \     /\         |  |('-. /   |  | |  ||  |  \  ' |  |     
- \| |_.'  | |  |`-' |(|  '--.    \   \ |        /_) |OO  )\_) |  |\|  ||  |   ' |(|  '--.  
-  |  .-.  |(|  '---.' |  .--'   .'    \_)       ||  |`-'|   \ |  | |  ||  |   / : |  .--'  
-  |  | |  | |      |  |  `---. /  .'.  \       (_'  '--'\    `'  '-'  '|  '--'  / |  `---. 
-  `--' `--' `------'  `------''--'   '--'         `-----'      `-----' `-------'  `------' 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Naranjo — Full-Stack Developer</title>
+  <meta name="description" content="Alex Naranjo is a Full-Stack Developer in the Washington DC metro area specializing in Python, FastAPI, Laravel, REST APIs, and AI-assisted development.">
 
-================================== -->
-<html lang="en" class="no-js">
-    <!-- BEGIN HEAD -->
-    <head>
-        <meta charset="utf-8"/>
-        <title>Alex Naranjo Portfolio</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <meta content="Web Delevoper Maryland DC Virginia" name="description"/>
-        <meta content="Alex Naranjo" name="author"/>
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Alex Naranjo — Full-Stack Developer">
+  <meta property="og:description" content="Building production web apps, REST APIs, and data pipelines — Python, cloud, and AI tooling.">
+  <meta property="og:url"         content="https://alexnaranjom.github.io/portfolio/">
+  <meta property="og:type"        content="website">
 
-        <!-- GLOBAL MANDATORY STYLES -->
-        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
-        <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <!-- Canonical -->
+  <link rel="canonical" href="https://alexnaranjom.github.io/portfolio/">
 
-        <!-- PAGE LEVEL PLUGIN STYLES -->
-        <link href="css/animate.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
 
-        <!-- THEME STYLES -->
-        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        <!-- Hero readability tweaks -->
-        <style>
-            .promo-block {
-                position: relative;
-            }
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
 
-            .promo-block::before {
-                content: '';
-                position: absolute;
-                inset: 0;
-                background: rgba(0, 0, 0, 0.45); /* darken busy backgrounds for contrast */
-                z-index: 0;
-            }
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alex Naranjo",
+    "jobTitle": "Full-Stack Developer",
+    "url": "https://alexnaranjom.github.io/portfolio/",
+    "sameAs": [
+      "https://github.com/alexnaranjom",
+      "https://www.linkedin.com/in/alexnaranjom"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Washington DC Metro Area",
+      "addressCountry": "US"
+    },
+    "knowsAbout": ["Python", "FastAPI", "PHP", "Laravel", "REST APIs", "AWS", "Claude API"]
+  }
+  </script>
+</head>
+<body>
 
-            .hero-content {
-                position: relative;
-                z-index: 1;
-                max-width: 720px;
-                padding: 24px 28px;
-                background: rgba(0, 0, 0, 0.68); /* semi-transparent card behind text */
-                border-radius: 10px;
-                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
-            }
+  <!-- ==============================
+       NAVIGATION
+       ============================== -->
+  <header class="nav-header" id="nav-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="#hero" class="nav-logo" aria-label="Alex Naranjo — home">AN</a>
 
-            .hero-content h1,
-            .hero-content h2,
-            .hero-content p {
-                color: #fff;
-                text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* edge definition over images */
-            }
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-            .hero-content h1 {
-                font-size: 3.25rem;
-                line-height: 1.05;
-            }
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about"          class="nav-link">About</a></li>
+        <li><a href="#skills"         class="nav-link">Skills</a></li>
+        <li><a href="#projects"       class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#experience"     class="nav-link">Experience</a></li>
+        <li><a href="#contact"        class="nav-link nav-link-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            .hero-content h2 {
-                font-size: 1.5rem;
-                margin-bottom: 0.75rem;
-                line-height: 1.3;
-            }
+  <main>
 
-            .hero-content p {
-                font-size: 1.05rem;
-                line-height: 1.65;
-                margin: 0;
-            }
-
-            p {
-                color: #515769;
-            }
-
-            @media (max-width: 768px) {
-                .hero-content {
-                    max-width: 100%;
-                    padding: 18px 20px;
-                }
-
-                .hero-content h1 {
-                    font-size: 2.4rem;
-                }
-
-                .hero-content h2 {
-                    font-size: 1.2rem;
-                }
-
-                .hero-content p {
-                    font-size: 0.98rem;
-                }
-            }
-        </style>
-
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="favicon.ico"/>
-    </head>
-    <!-- END HEAD -->
-
-    <!-- BODY -->
-    <body id="body" data-spy="scroll" data-target=".header">
-
-        <!--========== HEADER ==========-->
-        <header class="header navbar-fixed-top">
-            <!-- Navbar -->
-            <nav class="navbar" role="navigation">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="menu-container js_nav-item">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="toggle-icon"></span>
-                        </button>
-
-                        <!-- Logo -->
-                        <div class="logo">
-                            <a class="logo-wrap" href="#body">
-                                <img class="logo-img logo-img-main" src="img/logo.png" alt="Alex Naranjo logo">
-                                <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="Alex Naranjo logo dark">
-                            </a>
-                        </div>
-                        <!-- End Logo -->
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse nav-collapse">
-                        <div class="menu-container">
-                            <ul class="nav navbar-nav navbar-nav-right">
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Home</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#about">About</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#experience">Experience</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">Work</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End Navbar Collapse -->
-                </div>
-            </nav>
-            <!-- Navbar -->
-        </header>
-        <!--========== END HEADER ==========-->
-
-        <!--========== SLIDER ==========-->
-       <div class="promo-block parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/01.jpg">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="hero-content">
-                    <h1 class="promo-block-title">Alex <br/> Naranjo</h1>
-                    <h2>Web Developer</h2>
-                    <p class="tagline">Web developer with 5+ years delivering production web applications for government and private clients.
-                        Specializing in PHP/Laravel, accessibility (Section 508), and clean, maintainable code, while actively expanding into Python and AI-assisted development to take on broader architectural responsibilities.
-                    </p>
-                        </div>
-                        <ul class="list-inline">
-                            <li><a href="https://www.linkedin.com/in/alex-naranjom/" class="social-icons" aria-label="LinkedIn profile"><i class="icon-social-linkedin"></i></a></li>
-                            <li><a href="https://github.com/alexnaranjom" class="social-icons"><i class="icon-social-github"></i></a></li>
-                    
-                        </ul>
-                    </div>
-                </div>
-                <!--// end row -->
-            </div>
+    <!-- ==============================
+         HERO
+         ============================== -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="hero-content fade-in">
+        <p class="hero-eyebrow">Hi, I'm</p>
+        <h1 class="hero-name">Alex Naranjo</h1>
+        <h2 class="hero-title">Full-Stack Developer</h2>
+        <p class="hero-tagline">
+          Building production web apps, REST APIs, and data pipelines<br>
+          — with a focus on Python, cloud, and AI-assisted development.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="https://github.com/alexnaranjom" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/alexnaranjom" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
+          </a>
         </div>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <svg width="14" height="20" viewBox="0 0 14 20" fill="none" focusable="false">
+          <rect x="5" y="2" width="4" height="6" rx="2" fill="currentColor" opacity="0.6"/>
+          <path d="M7 12l-3.5 4h7L7 12z" fill="currentColor" opacity="0.6"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ==============================
+         ABOUT
+         ============================== -->
+    <section class="section section-light" id="about">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-photo-wrap">
+            <div class="about-photo" aria-hidden="true">
+              <!--
+                Replace this span with your photo once available:
+                <img src="img/profile.jpg" alt="Alex Naranjo" class="about-photo-img">
+              -->
+              <span class="about-initials">AN</span>
+            </div>
+          </div>
+
+          <div class="about-content animate-on-scroll">
+            <h2 class="section-title">About Me</h2>
+            <p>I'm a full-stack developer with four years of experience building and maintaining web applications on a federal government contract at ICF, supporting the Social Security Administration. My work has spanned PHP/Laravel backends, MySQL databases, and accessibility-compliant frontends — all within a high-compliance environment governed by FISMA and Section 508 standards.</p>
+            <p>My current focus is Python-based backend development: building REST APIs with FastAPI, designing ETL data pipelines, and integrating AI tooling using the Claude API. I'm drawn to work at the intersection of clean backend architecture and practical automation.</p>
+            <p>I'm actively pursuing roles in backend development, data engineering, and AI integration — particularly on teams building APIs, pipelines, or developer tooling. I hold an AWS Cloud Practitioner certification and a Master's in Information Technology.</p>
+            <p class="about-location">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              Washington DC Metro Area
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         SKILLS
+         ============================== -->
+    <section class="section section-muted" id="skills">
+      <div class="container">
+        <h2 class="section-title section-title-center animate-on-scroll">Skills</h2>
+
+        <div class="skills-grid animate-on-scroll">
+
+          <div class="skill-card">
+            <h3 class="skill-card-title">Backend &amp; APIs</h3>
+            <ul class="skill-list" role="list">
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="" width="22" height="22" loading="lazy">
+                PHP
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="" width="22" height="22" loading="lazy">
+                Laravel
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" width="22" height="22" loading="lazy">
+                Python
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="" width="22" height="22" loading="lazy">
+                FastAPI
+              </li>
+              <li><span class="skill-text-badge">REST APIs</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-card-title">Frontend</h3>
+            <ul class="skill-list" role="list">
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" width="22" height="22" loading="lazy">
+                HTML5
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" width="22" height="22" loading="lazy">
+                CSS3
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="22" height="22" loading="lazy">
+                JavaScript
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="" width="22" height="22" loading="lazy">
+                Bootstrap
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-card-title">Databases</h3>
+            <ul class="skill-list" role="list">
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" width="22" height="22" loading="lazy">
+                MySQL
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="" width="22" height="22" loading="lazy">
+                PostgreSQL
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="" width="22" height="22" loading="lazy">
+                SQLite
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-card-title">Cloud &amp; AI</h3>
+            <ul class="skill-list" role="list">
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="" width="22" height="22" loading="lazy">
+                AWS
+              </li>
+              <li><span class="skill-text-badge">Claude API</span></li>
+              <li><span class="skill-text-badge">ServiceNow</span></li>
+              <li><span class="skill-text-badge">GitHub Copilot</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-card-title">Compliance</h3>
+            <ul class="skill-list" role="list">
+              <li><span class="skill-text-badge">Section 508</span></li>
+              <li><span class="skill-text-badge">FISMA</span></li>
+              <li><span class="skill-text-badge">Gov Web Standards</span></li>
+              <li><span class="skill-text-badge">Accessibility</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-card-title">Tools &amp; Methods</h3>
+            <ul class="skill-list" role="list">
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" width="22" height="22" loading="lazy">
+                Git / GitHub
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="" width="22" height="22" loading="lazy">
+                VS Code
+              </li>
+              <li><span class="skill-text-badge">Agile / Scrum</span></li>
+              <li><span class="skill-text-badge">MVC Architecture</span></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="currently-learning animate-on-scroll">
+          <h3 class="currently-learning-title">Currently Learning</h3>
+          <div class="learning-tags">
+            <span class="learning-tag">Python Advanced Patterns</span>
+            <span class="learning-tag">Apache Airflow</span>
+            <span class="learning-tag">AWS Solutions Architect</span>
+            <span class="learning-tag">Data Engineering</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================
+         PROJECTS
+         ============================== -->
+    <section class="section section-dark" id="projects">
+      <div class="container">
+        <h2 class="section-title section-title-center animate-on-scroll">Projects</h2>
+
+        <div class="projects-grid">
+
+          <article class="project-card animate-on-scroll">
+            <div class="project-card-header">
+              <svg class="project-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+              <h3 class="project-title">python-etl-pipeline</h3>
+            </div>
+            <p class="project-desc">End-to-end ETL pipeline with structured logging, robust error handling, and a FastAPI endpoint for triggering and monitoring pipeline runs.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">ETL</span>
+            </div>
+            <a href="https://github.com/alexnaranjom/python-etl-pipeline" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View python-etl-pipeline on GitHub">
+              View on GitHub
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="project-card animate-on-scroll">
+            <div class="project-card-header">
+              <svg class="project-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+              </svg>
+              <h3 class="project-title">anthropic-api-solutions</h3>
+            </div>
+            <p class="project-desc">Exploration of the Claude API covering multi-turn conversations, tool use, streaming responses, and prompt engineering patterns.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Claude API</span>
+              <span class="tag">Streaming</span>
+              <span class="tag">Tool Use</span>
+            </div>
+            <a href="https://github.com/alexnaranjom/anthropic-api-solutions" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View anthropic-api-solutions on GitHub">
+              View on GitHub
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="project-card animate-on-scroll">
+            <div class="project-card-header">
+              <svg class="project-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+              <h3 class="project-title">fastapi-contacts-crud</h3>
+            </div>
+            <p class="project-desc">RESTful CRUD API for contact management built with FastAPI and Pydantic v2, featuring async endpoints and strict input validation.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Pydantic</span>
+              <span class="tag">REST</span>
+            </div>
+            <a href="https://github.com/alexnaranjom/fastapi-contacts-crud" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View fastapi-contacts-crud on GitHub">
+              View on GitHub
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="project-card animate-on-scroll">
+            <div class="project-card-header">
+              <svg class="project-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+              </svg>
+              <h3 class="project-title">python-document-automation</h3>
+            </div>
+            <p class="project-desc">Batch document generation pipeline that reads data from Excel spreadsheets and produces formatted Word documents at scale using ETL patterns.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">openpyxl</span>
+              <span class="tag">python-docx</span>
+              <span class="tag">Automation</span>
+            </div>
+            <a href="https://github.com/alexnaranjom/python-document-automation" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View python-document-automation on GitHub">
+              View on GitHub
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="project-card animate-on-scroll">
+            <div class="project-card-header">
+              <svg class="project-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+              </svg>
+              <h3 class="project-title">python-weather-sms-api</h3>
+            </div>
+            <p class="project-desc">Weather notification system that fetches forecast data from a third-party API and delivers SMS alerts via Twilio integration.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">Twilio</span>
+            </div>
+            <a href="https://github.com/alexnaranjom/python-weather-sms-api" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View python-weather-sms-api on GitHub">
+              View on GitHub
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="project-card animate-on-scroll">
+            <div class="project-card-header">
+              <svg class="project-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+              </svg>
+              <h3 class="project-title">laravel-contacts-api</h3>
+            </div>
+            <p class="project-desc">Laravel REST API for contact management with search, pagination, and comprehensive PHPUnit test coverage.</p>
+            <div class="project-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">Laravel</span>
+              <span class="tag">PHPUnit</span>
+              <span class="tag">REST</span>
+            </div>
+            <a href="https://github.com/alexnaranjom/laravel-contacts-api" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View laravel-contacts-api on GitHub">
+              View on GitHub
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </article>
+
+        </div>
+
+        <details class="legacy-projects">
+          <summary class="legacy-projects-toggle">Legacy Projects</summary>
+          <div class="projects-grid projects-grid-legacy">
+
+            <article class="project-card project-card-legacy animate-on-scroll">
+              <h3 class="project-title">Ted Turner Companies</h3>
+              <p class="project-desc">Corporate website redesign with responsive layout and CMS integration.</p>
+              <div class="project-tags">
+                <span class="tag">WordPress</span><span class="tag">PHP</span><span class="tag">CSS</span>
+              </div>
+            </article>
+
+            <article class="project-card project-card-legacy animate-on-scroll">
+              <h3 class="project-title">Ministry of Sports</h3>
+              <p class="project-desc">Government portal with multi-language support and accessibility compliance.</p>
+              <div class="project-tags">
+                <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span>
+              </div>
+            </article>
+
+            <article class="project-card project-card-legacy animate-on-scroll">
+              <h3 class="project-title">Ecuador ZIP Code System</h3>
+              <p class="project-desc">Geographic data lookup tool for Ecuadorian postal codes with REST API backend.</p>
+              <div class="project-tags">
+                <span class="tag">JavaScript</span><span class="tag">REST API</span>
+              </div>
+            </article>
+
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ==============================
+         CERTIFICATIONS
+         ============================== -->
+    <section class="section section-light" id="certifications">
+      <div class="container">
+        <h2 class="section-title section-title-center animate-on-scroll">Certifications</h2>
+
+        <div class="certs-grid animate-on-scroll">
+
+          <a href="https://www.credly.com/badges/YOUR_AWS_BADGE_ID" target="_blank" rel="noopener noreferrer" class="cert-card" aria-label="AWS Certified Cloud Practitioner — verify on Credly">
+            <img src="img/icon/AWS-CloudPractitioner-2020.png" alt="AWS Certified Cloud Practitioner badge" class="cert-badge" loading="lazy">
+            <div class="cert-info">
+              <h3 class="cert-name">AWS Cloud Practitioner</h3>
+              <p class="cert-issuer">Amazon Web Services</p>
+              <span class="cert-verify">Verify on Credly ↗</span>
+            </div>
+          </a>
+
+          <a href="#" target="_blank" rel="noopener noreferrer" class="cert-card" aria-label="ServiceNow Certified System Administrator — verify credential">
+            <img src="img/icon/servicenow.png" alt="ServiceNow Certified System Administrator badge" class="cert-badge" loading="lazy">
+            <div class="cert-info">
+              <h3 class="cert-name">ServiceNow CSA</h3>
+              <p class="cert-issuer">ServiceNow</p>
+              <span class="cert-verify">Verify ↗</span>
+            </div>
+          </a>
+
+          <a href="https://verify.openedu.eu" target="_blank" rel="noopener noreferrer" class="cert-card" aria-label="PCEP Python Programmer — verify on OpenEDG">
+            <img src="img/icon/pcep.png" alt="PCEP Certified Entry-Level Python Programmer badge" class="cert-badge" loading="lazy">
+            <div class="cert-info">
+              <h3 class="cert-name">PCEP Python Programmer</h3>
+              <p class="cert-issuer">Python Institute / OpenEDG</p>
+              <span class="cert-verify">Verify on OpenEDG ↗</span>
+            </div>
+          </a>
+
+          <a href="https://verify.skilljar.com/c/wmukgcyo6vxd" target="_blank" rel="noopener noreferrer" class="cert-card" aria-label="Claude Code Certification — verify on Skilljar">
+            <img src="img/icon/web.png" alt="Claude Code certification badge" class="cert-badge" loading="lazy">
+            <div class="cert-info">
+              <h3 class="cert-name">Claude Code</h3>
+              <p class="cert-issuer">Anthropic / Skilljar</p>
+              <span class="cert-verify">Verify on Skilljar ↗</span>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="education animate-on-scroll">
+          <h3 class="education-title">Education</h3>
+          <div class="education-grid">
+            <div class="education-item">
+              <h4>MS Information Technology</h4>
+              <p>Army University ESPE — Ecuador</p>
+            </div>
+            <div class="education-item">
+              <h4>BS Systems Engineering</h4>
+              <p>Salesian Polytechnic University — Ecuador</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================
+         EXPERIENCE
+         ============================== -->
+    <section class="section section-muted" id="experience">
+      <div class="container">
+        <h2 class="section-title section-title-center animate-on-scroll">Experience</h2>
+
+        <div class="timeline">
+
+          <div class="timeline-item animate-on-scroll">
+            <div class="timeline-date">2022 – 2026</div>
+            <div class="timeline-content">
+              <h3 class="timeline-role">Full-Stack Developer</h3>
+              <p class="timeline-org">ICF — Social Security Administration Contract</p>
+              <ul class="timeline-bullets">
+                <li>Built and maintained SSA web applications using PHP, Laravel, and MySQL in a FISMA-regulated, high-security environment</li>
+                <li>Led Section 508 accessibility remediation across multiple government-facing portals, ensuring compliance with federal web standards</li>
+                <li>Collaborated with cross-functional Agile teams to deliver iterative releases under tight compliance and quality requirements</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item animate-on-scroll">
+            <div class="timeline-date">Earlier</div>
+            <div class="timeline-content">
+              <h3 class="timeline-role">Software Engineer</h3>
+              <p class="timeline-org">CEIEC</p>
+              <ul class="timeline-bullets">
+                <li>Developed a facial recognition system integrating computer vision techniques with a REST API layer for real-time identity verification</li>
+                <li>Built an API interoperability layer connecting multiple internal services with external data sources and third-party platforms</li>
+                <li>Contributed to MongoDB data modeling and backend architecture decisions for scalable microservice components</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         CONTACT
+         ============================== -->
+    <section class="section section-dark" id="contact">
+      <div class="container">
+        <div class="contact-wrap">
+
+          <div class="contact-info animate-on-scroll">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-tagline">I'm open to new opportunities in backend development, data engineering, and AI tooling. If you're building something interesting, let's talk.</p>
+            <p class="contact-location">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              Washington DC Metro Area
+            </p>
+          </div>
+
+          <!--
+            Formspree setup:
+            1. Sign up at formspree.io
+            2. Create a new form and copy your endpoint ID
+            3. Replace YOUR_FORM_ID below with that ID
+            Example: action="https://formspree.io/f/xpwzabcd"
+          -->
+          <form class="contact-form animate-on-scroll" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <div class="form-row">
+              <label class="form-label" for="contact-name">Name</label>
+              <input class="form-input" type="text" id="contact-name" name="name" required autocomplete="name" placeholder="Your name">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="contact-email">Email</label>
+              <input class="form-input" type="email" id="contact-email" name="email" required autocomplete="email" placeholder="your@email.com">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="contact-message">Message</label>
+              <textarea class="form-input form-textarea" id="contact-message" name="message" required placeholder="What's on your mind?" rows="5"></textarea>
+            </div>
+            <button class="btn btn-primary btn-full" type="submit">Send Message →</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================
+       FOOTER
+       ============================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© 2025 Alex Naranjo</p>
+      <div class="footer-links">
+        <a href="https://github.com/alexnaranjom" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/alexnaranjom" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+      </div>
     </div>
-</div>
+  </footer>
 
-        <!--========== SLIDER ==========-->
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
 
-        <!--========== PAGE LAYOUT ==========-->
-        <!-- About -->
-        <div id="about">
-            <div class="container content-lg">
-                <div class="row">
-                    <div class="col-sm-3 sm-margin-b-30">
-                        <div class="text-right sm-text-left">
-                            <h2 class="margin-b-0">Intro</h2>
-                            <p>Who I am:</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-8 col-sm-offset-1">
-                        <div class="margin-b-60">
-                            <p>Hello, my name is Alex Naranjo. I'm a web developer based in the Washington, DC metro area with over 5 years of experience building and maintaining production websites and web applications. I specialize in PHP, Laravel, JavaScript, HTML5/CSS3, and SQL databases such as MySQL and PostgreSQL.</p>
-                            <p>In my current role at ICF, I support a Social Security Administration project focused on accessibility (Section 508) and clear user experiences. I also use tools like GitHub Copilot and ChatGPT to design, debug, and refactor code, and I'm gradually expanding my skills in Python and AI-driven architectures so I can take on more integration and architectural responsibilities in the future.</p>
-                        </div>
-
-                        <!-- skills -->
-                        <h5>My main skills are:</h5>
-                        <ul class="skills-list">
-                                <li><strong>Backend & Web:</strong> PHP, Laravel, JavaScript, HTML5, CSS3, REST APIs, Python and AI-focused architecture</li>
-                                <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
-                                <li><strong>Cloud & Platforms:</strong> AWS (Cloud Practitioner), ServiceNow (CSA), WordPress</li>
-                                <li><strong>Tools & Workflow:</strong> Git, GitHub, Visual Studio Code, GitHub Copilot, ChatGPT</li>
-                         </ul>
-                        <!-- skills -->
-                    </div>
-                </div>
-                <!--// end row -->
-            </div>
-        </div>
-        <!-- End About -->
-
-        <!-- Experience -->
-        <div id="experience">
-            <div class="bg-color-sky-light" data-auto-height="true">
-              <div class="container content-lg">
-                  <div class="row">
-                        <div class="col-sm-3 sm-margin-b-30">
-                          <div class="text-right sm-text-left">
-                              <h2 class="margin-b-0">Education:</h2>
-                             <p>Little more about me</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-8 col-sm-offset-1">
-                            <div class="row row-space-2 margin-b-4">
-                                <div class="col-md-4 md-margin-b-4">
-                                    <div class="service" data-height="height">
-                                        <div class="service-element">
-                                            <i class="service-icon icon-cloud-upload"></i>
-                                        </div>
-                                        <div class="service-info">
-                                            <h3>AWS Certified Cloud Practitioner</h3>
-                                            <img src="img/icon/AWS-CloudPractitioner-2020.png" class="height-100" alt="AWS CPP"/>
-                                            <p class="margin-b-5">Issued by Amazon Web Services Training and Certification</p>
-                                           
-                                        </div>
-                                        <a href="https://www.credly.com/badges/d3a1b677-fbbb-4f62-9696-7a19ca3916e0?source=linked_in_profile" class="content-wrapper-link" target="_blank"></a>    
-                                    </div>
-                                </div>
-                                <div class="col-md-4 md-margin-b-4">
-                                    <div class="service bg-color-base wow zoomIn" data-height="height" data-wow-duration=".3" data-wow-delay=".1s">
-                                        <div class="service-element">
-                                            <i class="service-icon color-white icon-cloud-download"></i>
-                                        </div>
-                                        <div class="service-info">
-                                            <h3 class="color-white">ServiceNow CSA</h3>
-                                            <BR>
-                                            <img src="img/icon/servicenow.png" class="height-100" alt=""/>                
-                                            <p class="color-white margin-b-5">Certified System Administrator</p>
-                                        </div>
-                                        <a href="#" class="content-wrapper-link"></a>    
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="service" data-height="height">
-                                        <div class="service-element">
-                                            <i class="service-icon icon-badge"></i>
-                                        </div>
-                                        <div class="service-info">
-                                            <h3>PCEP Python Programmer</h3>
-                                            <img src="img/icon/pcep.png" class="height-100" alt=""/>                
-                                            <p class="margin-b-5">Python Institute Certified Entry-Level Python Programmer</p>
-                                        </div>
-                                        <a href="https://verify.openedg.org/?id=OZJt.datP.auZ6" class="content-wrapper-link"></a>    
-                                    </div>
-                                </div>
-                            </div>
-                            <!--// end row -->
-                        </div>
-                    </div>
-                    <!--// end row -->
-                </div>
-            </div>
-        </div>
-        <!-- End Experience -->
-
-        <!-- Work -->
-        <div id="work">
-            <div class="container content-lg">
-                <div class="row">
-                    <div class="col-sm-3 sm-margin-b-30">
-                        <div class="text-right sm-text-left">
-                            <h2 class="margin-b-0">Selected Projects</h2>
-                            <p>Some of the websites and web applications I’ve contributed to over the years.</p>
-                            <p>Click on a project image to see more details.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-8 col-sm-offset-1">
-                        <!-- Masonry Grid -->
-                        <div class="masonry-grid row row-space-2">
-                            <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
-                            <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-8 margin-b-4">
-                                <!-- Work -->
-                                <div class="work work-popup-trigger">
-                                    <div class="work-overlay">
-                                        <img class="full-width img-responsive" src="img/800x400/01.jpg" alt="Ted Turner Company website screenshot">
-                                    </div>
-                                    <div class="work-popup-overlay">
-                                        <div class="work-popup-content">
-                                            <a href="javascript:void(0);" class="work-popup-close">Hide</a>
-                                            <div class="margin-b-30">
-                                                <h3 class="margin-b-5">Ted Turner Company</h3>    
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
-                                                    <div class="margin-t-10 sm-margin-t-0">
-                                                        <p>Website Ted Turner Company Ltda. </p>
-                                                        <p>Located in Beltsville, MD. Ted Turner Company, Inc, specializes in handrails fabrication, cladding, laser cutting and more </p>
-                                                        <ul class="list-inline work-popup-tag">
-                                                            <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://www.tedturnercompany.com">Go to tedturnercompany.com</a></li>
-                                                             </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="margin-t-10 sm-margin-t-0">
-                                                        <p class="margin-b-5"><strong>Tools:</strong> </p>
-                                                        <p class="margin-b-5">PHP</p>
-                                                        <p class="margin-b-5">HTML</p>
-                                                        <p class="margin-b-5">Mysql</p>
-                                                        <p class="margin-b-5">CSS</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Work -->
-                            </div>
-                            <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 margin-b-4">
-                                <!-- Work -->
-                                <div class="work work-popup-trigger">
-                                    <div class="work-overlay">
-                                        <img class="full-width img-responsive" src="img/397x400/01.jpg" alt="SecurTech security solutions website screenshot">>
-                                    </div>
-                                    <div class="work-popup-overlay">
-                                        <div class="work-popup-content">
-                                            <a href="javascript:void(0);" class="work-popup-close">Hide</a>
-                                            <div class="margin-b-30">
-                                                <h3 class="margin-b-5">SecurTech</h3>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
-                                                    <div class="margin-t-10 sm-margin-t-0">
-                                                        <p>Website SecurTech </p>
-                                                        <p>Equipment, software, and security solutions.</p>
-                                                        <ul class="list-inline work-popup-tag">
-                                                            <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://securtech.com.ec/">Go to securtech.com.ec</a></li>
-                                                             </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="margin-t-10 sm-margin-t-0">
-                                                        <p class="margin-b-5"><strong>Tools:</strong> </p>
-                                                        <p class="margin-b-5">Wordpress</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Work -->
-                            </div>
-                            <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 md-margin-b-4">
-                                <!-- Work -->
-                                <div class="work work-popup-trigger">
-                                    <div class="work-overlay">
-                                        <img class="full-width img-responsive" src="img/397x300/01.jpg" alt="Ecuador ZIP code website screenshot">
-                                    </div>
-                                    <div class="work-popup-overlay">
-                                        <div class="work-popup-content">
-                                            <a href="javascript:void(0);" class="work-popup-close">Hide</a>
-                                            <div class="margin-b-30">
-                                                <h3 class="margin-b-5">Ecuador - ZIP code</h3>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
-                                                    <div class="margin-t-10 sm-margin-t-0">
-                                                        <p>Website to search ZIP codes in Ecuador, developed with ArcGIS, PostgreSQL, CSS, and JavaScript.</p>
-                                                        <ul class="list-inline work-popup-tag">
-                                                            <li class="work-popup-tag-item"></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="margin-t-10 sm-margin-t-0">
-                                                        <p class="margin-b-5"><strong>Tools:</strong></p>
-                                                        <p class="margin-b-5">JavaScript</p>
-                                                        <p class="margin-b-5">ArcGIS</p>
-                                                        <p class="margin-b-5">PostgreSQL</p>
-                                                        <p class="margin-b-5">CSS</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Work -->
-                            </div>
-                            <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 md-margin-b-4">
-                                <!-- Work -->
-                                <div class="work work-popup-trigger">
-                                    <div class="work-overlay">
-                                        <img class="full-width img-responsive" src="img/397x300/02.jpg" alt="Ministry of Sports - Ecuador website screenshot">
-                                    </div>
-                                    <div class="work-popup-overlay">
-                                        <div class="work-popup-content">
-                                            <a href="javascript:void(0);" class="work-popup-close">Hide</a>
-                                            <div class="margin-b-30">
-                                                <h3 class="margin-b-5">Ministry of Sports - Ecuador</h3>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
-                                                    <div class="margin-t-10 sm-margin-t-0">
-                                                        <p>Several web applications to promote community participation in recreational activities</p>
-                                                        <ul class="list-inline work-popup-tag">
-                                                            <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://www.deporte.gob.ec/">Go to Main website  </a></li>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="margin-t-10 sm-margin-t-0">
-                                                        <p class="margin-b-5"><strong>Tools:</strong></p>
-                                                        <p class="margin-b-5">JavaScript</p>
-                                                        <p class="margin-b-5">Bootstrap</p>
-                                                        <p class="margin-b-5">MySQL</p>
-                                                        <p class="margin-b-5">CSS</p>
-                                                        <p class="margin-b-5">PHP</p>
-                                                        <p class="margin-b-5">jQuery</p>     
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Work -->
-                            </div>
-                            <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
-                                <!-- Work -->
-                                <div class="work work-popup-trigger">
-                                    <div class="work-overlay">
-                                        <img class="full-width img-responsive" src="img/397x300/03.jpg" alt="Responsive Gallery screenshot">
-                                    </div>
-                                    <div class="work-popup-overlay">
-                                        <div class="work-popup-content">
-                                            <a href="javascript:void(0);" class="work-popup-close">Hide</a>
-                                            <div class="margin-b-30">
-                                                <h3 class="margin-b-5">Responsive Gallery with tools to filter pictures by tags</h3>
-                                                <span></span>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
-                                                    <div class="margin-t-10 sm-margin-t-0">
-                                                        <p>Mix it up gallery to find pictures</p>
-                                                        <ul class="list-inline work-popup-tag">
-                                                            <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://www.tedturnercompany.com/gallery.html">Go to Gallery</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="margin-t-10 sm-margin-t-0">
-                                                        <p class="margin-b-5"><strong>Tools:</strong></p>
-                                                        <p class="margin-b-5">JQuery</p>
-                                                        <p class="margin-b-5">CSS</p>
-                                                        <p class="margin-b-5">JavaScript</p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Work -->
-                            </div>
-                            <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
-                             <!-- Work -->
-                                <div class="work work-popup-trigger">
-                                  <div class="work-overlay">
-                                      <img class="full-width img-responsive" src="img/397x300/CRUD.png" alt="Contacts API Project">
-                                 </div>
-                                 <div class="work-popup-overlay">
-                                      <div class="work-popup-content">
-                                                                        <a href="javascript:void(0);" class="work-popup-close">Hide</a>
-                                          <div class="margin-b-30">
-                                              <h3 class="margin-b-5">Contacts API (Study Project)</h3>
-                                          </div>
-                                          <div class="row">
-                                             <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
-                                                 <div class="margin-t-10 sm-margin-t-0">
-                                                        <p>Practice project built to explore modern Laravel development, REST APIs, search, and pagination.</p>
-                                                       <p>I used GitHub Copilot and ChatGPT to refactor controllers, debug test failures, and improve error handling.</p>
-                                                      
-                                                      <ul class="list-inline work-popup-tag">
-                                                         <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://github.com/alexnaranjom/laravel-contacts-api">View on GitHub</a></li>
-                                                     </ul>
-                                                   
-                                                  </div>
-                                             </div>
-                                              <div class="col-sm-4">
-                                                   <div class="margin-t-10 sm-margin-t-0">
-                                                      <p class="margin-b-5"><strong>Tools:</strong></p>
-                                                     <p class="margin-b-5">Laravel</p>
-                                                        <p class="margin-b-5">PHP</p>
-                                                       <p class="margin-b-5">SQLite/MySQL</p>
-                                                        <p class="margin-b-5">PHPUnit</p>
-                                                     <p class="margin-b-5">GitHub Copilot</p>
-                                                      <p class="margin-b-5">ChatGPT</p>
-                                                  </div>
-                                               </div>
-                                          </div>
-                                     </div>
-                                 </div>
-                                </div>
-                             <!-- End Work -->
-                            </div>
-                        </div>
-                        <!-- End Masonry Grid -->
-                    </div>
-                </div>
-                <!--// end row -->
-            </div>
-        </div>
-        <!-- End Work -->
-            
-        <!-- Contact -->
-        <div id="contact">
-            <div class="bg-color-sky-light">
-                <div class="container content-lg">
-                    <div class="row">
-                        <div class="col-sm-3 sm-margin-b-30">
-                            <div class="text-right sm-text-left">
-                                <h2 class="margin-b-0">Contacts</h2>
-                            </div>
-                        </div>
-                        <div class="col-sm-8 col-sm-offset-1">
-                            <div class="row">
-                                <div class="col-md-3 col-xs-6 md-margin-b-30">
-                                    <h5>Location</h5>
-                                    <a href="#">Takoma Park, MD</a>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <h5>Email</h5>
-                                    <a href="mailto:alex.naranjo.m@gmail.com">alex.naranjo.m@gmail.com</a>
-                                </div>
-                               
-                            </div>
-                        </div>
-                      
-                    </div>
-                    <!--// end row -->
-                </div>
-            </div>
-        </div>
-        <!-- End Contact -->
-        <!--========== END PAGE LAYOUT ==========-->
-
-        <!--========== FOOTER ==========-->
-        <footer class="footer">
-            <div class="content container">
-                <div class="row">
-                    <div class="col-xs-6">
-                        <img class="footer-logo" src="img/logo-dark.png" alt="Aircv Logo">
-                    </div>
-                    <div class="col-xs-6 text-right">
-                        <p class="margin-b-0">© Alex Naranjo 2024. All Rights Reserved.</p>
-                    </div>
-                </div>
-                <!--// end row -->
-            </div>
-        </footer>
-        <!--========== END FOOTER ==========-->
-
-        <!-- Back To Top -->
-        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
-
-        <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-        <!-- CORE PLUGINS -->
-        <script src="vendor/jquery.min.js" type="text/javascript"></script>
-        <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
-        <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-
-        <!-- PAGE LEVEL PLUGINS -->
-        <script src="vendor/jquery.easing.js" type="text/javascript"></script>
-        <script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
-        <script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
-        <script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
-        <script src="vendor/jquery.parallax.min.js" type="text/javascript"></script>
-        <script src="vendor/jquery.appear.js" type="text/javascript"></script>
-        <script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
-        <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
-
-        <!-- PAGE LEVEL SCRIPTS -->
-        <script src="js/layout.min.js" type="text/javascript"></script>
-        <script src="js/components/progress-bar.min.js" type="text/javascript"></script>
-        <script src="js/components/masonry.min.js" type="text/javascript"></script>
-        <script src="js/components/wow.min.js" type="text/javascript"></script>
-
-    </body>
-    <!-- END BODY -->
+  <script src="js/main.js"></script>
+</body>
 </html>
