@@ -23,6 +23,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- hCaptcha -->
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -585,14 +588,7 @@
             </p>
           </div>
 
-          <!--
-            Formspree setup:
-            1. Sign up at formspree.io
-            2. Create a new form and copy your endpoint ID
-            3. Replace YOUR_FORM_ID below with that ID
-            Example: action="https://formspree.io/f/xpwzabcd"
-          -->
-          <form class="contact-form animate-on-scroll" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <form class="contact-form animate-on-scroll" action="https://formspree.io/f/mykowpao" method="POST" novalidate>
             <div class="form-row">
               <label class="form-label" for="contact-name">Name</label>
               <input class="form-input" type="text" id="contact-name" name="name" required autocomplete="name" placeholder="Your name">
@@ -605,6 +601,8 @@
               <label class="form-label" for="contact-message">Message</label>
               <textarea class="form-input form-textarea" id="contact-message" name="message" required placeholder="What's on your mind?" rows="5"></textarea>
             </div>
+            <!-- hCaptcha: replace YOUR_HCAPTCHA_SITEKEY with key from hcaptcha.com/signup-interstitial -->
+            <div class="h-captcha" data-sitekey="YOUR_HCAPTCHA_SITEKEY" data-theme="dark"></div>
             <button class="btn btn-primary btn-full" type="submit">Send Message →</button>
           </form>
 
